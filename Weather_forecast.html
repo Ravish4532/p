@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather Forecast </title>
+    <script src="https://kit.fontawesome.com/b356ad9dc8.js" crossorigin="anonymous"></script>
+	<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+      .about{
+        width:100%;
+        height:80vh;
+        background-color: #161922;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about .content img{
+        height:280px;
+        width: 300px;
+        max-width: 100%;
+      }
+.text{
+width:550px;
+max-height:100%;
+padding:0 10px;
+}
+.banner{
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(https://www.nowcast.de/wp-content/uploads/2020/09/lightning-detection-nowcast-weather-service-providers-845x400.jpg);
+     width:100%;     
+}
+.navbar{
+    margin:auto;
+background-image:linear-gradient(#033747,#012733);   
+ width: 100%;
+height: 125px;  
+  align-items: center;
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.lo{
+ width: 100px;
+height:100px;
+ margin:15px;
+line-height:65px;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+content: '';
+height: 3px;
+width: 0;
+background: #009688;
+position: absolute;
+left: 0;
+bottom: -10px;
+transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.contents{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#fff;
+}
+.contents h1{
+    font-size: 60px;
+    margin-top:90px;
+}
+.contents p{
+    margin: 20px auto;
+    font-weight: 200;
+    line-height: 25px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width:100%;
+}
+
+button:hover {
+    border:none;
+}
+
+
+
+        .content{
+            width:1280px;
+            max-width: 95%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+.text h1{
+    color:#ffcc74;
+    font-size: 80px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+.text h5{
+    color: white;
+    font-size: 35px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+   letter-spacing: 2px;
+}
+.text p{
+    color:#c0c4d6;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+button{ 
+   background-color: #ffcc74;
+    color: black;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+}
+button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 2px solid #ffcc74;
+    color:#ffcc74;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+section {
+    background-color: #222;
+    color:#fff;
+    height: 90vh;
+  }
+    .services{
+            background-color: GREY;
+            padding: 100px 60px;
+
+          }
+          .services h1{
+            text-align: center;
+            padding-bottom: 15px;
+            font-size: 40px;
+            font-weight: 600;
+            position: relative;
+            margin-bottom: 60px;
+          }
+          .services h1::after{
+            content: "";
+            position: absolute;
+            height: 3px;
+            width:170px;
+            background-color: #fff;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+          .conte{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            }
+           .card{
+            width: calc(34% - 20px);
+            color: #000;
+            text-align: center;
+            margin: 0 50px;
+            padding: 40px 10px;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 2px;
+          }
+          .box i{
+            font-size: 40px;
+            border-radius: 50%;
+            border: 1px solid  rgba(0,0,0,0.5);
+            padding: 15px;
+            transition: all 0.3s ease;
+          }
+          .box h2{
+            font-size: 25px;
+          }
+           .box p{
+            
+            font-size: 23px;
+            margin: 15px 0;
+           }
+            
+       .card:hover .box i{
+       color: #fff;
+       background-color: rgb(255,187,0) ; 
+       border-color: rgb(255,187,0) ;      
+      }      
+       
+       .card:hover{
+        background-color: blueviolet;
+        transition: all 0.3s ease;
+        transform: scale(1.10);
+       }
+footer{
+border:0;
+margin:0;
+position:absoute;
+bottom:0;
+background:#111;
+height:auto;
+width:100vw;
+padding-top: 40px;
+color:#fff;
+}
+
+#l3{
+width:165px;
+height: 135px;
+margin: 10px 10px 10px 10px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+        .footer-content{
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            line-height: 3rem;
+        }
+        .footer-content p{
+            max-width: 500px;
+            margin: 10px auto;
+            line-height: 28px;
+            font-size: 14px;
+        }
+.socials{
+            list-style: none;
+            margin: 1rem 0 3rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .socials li{
+            margin: 0 10px;
+        }
+        .socials a{
+            text-decoration: none;
+            color:#fff;
+        }
+        .socials a i{
+            font-size: 1.8rem;
+        }
+  .socials a:hover i{
+            color: aqua;
+        }
+        .footer-bottom {
+            background: #000;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-bottom p{
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+</style>
+</head>
+<body>
+<div class="banner">
+            <div class ="navbar">
+   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrC-srhyGjbVUoIens5aL99nWyXLHobsDNibD_qBtnrnlwgPw6hcyeQR666Uj7DhPuLvU&usqp=CAU" class="lo">
+                <ul>
+                    <li><a href ="#">Home</a></li>
+                    <li><a href ="#">About us</a></li>
+                    <li><a href ="#">Services</a></li>
+                </ul>
+            </div>
+        <div class="contents">
+            <h1>WEATHER FORECAST</h1>
+            <p>Weather forecasting is the application of science and technology to predict
+               <br>  the conditions of the atmosphere for a given location.</p>
+               <div>
+                <button type="button1" onclick="valueSender1()"><span></span>REGISTER</button>
+                <button type="buttonfa-stack-1x" onclick="valueSender2()"><span></span>LOGIN</button>
+               </div>
+        </div>
+            
+        </div>
+<section class ="about">
+        <div class="content">
+            <img src="C:\Users\LENOVO\Desktop\Project\Ravish.jpg">
+        <div class="text">
+            <h1> About us </h1>
+            <h5> Developer </h5>
+            <p> I am Ravish Kumar Barnwal. I am pursuing my 3rd year B-tech from Bhubaneshwar Institute of Technology(BIT).
+                 I am looking for a challenging job where I can utilize my talent and knowledge.
+                 I want to learn with the organization and growth with the organization.
+                 My Objective is to be a senior manager in the reputed company. </p>
+<button type="button" onClick ="valueSender()">Contact Us</button>
+        </div>
+        </div>
+</section>
+<section>
+<div class="services">
+  <h1>SERVICES</h1>
+    <div class="conte">        
+
+      <div class="card">      
+     <div class="box" > <i class="fa-solid fa-temperature-full"></i>
+          <h2>Temperature</h2>
+            <p>Temperature is a physical quantity that expresses quantitatively the perceptions of hotness and coldness.</p>
+        </div>
+        </div>
+    
+        <div class="card">
+            <div class="box" ><i class="fa-solid fa-droplet"></i>    
+          <h2>Humidity</h2>
+            <p>Humidity is the amount of water vapor in the air. If there is a lot of water vapor in air, the humidity will be high.</p>
+        </div>
+        </div>
+    
+        <div class="card">
+            <div class="box"><i class="fa-sharp fa-solid fa-wind"></i>
+            <h2>Wind Speed</h2>
+            <p>Wind speed is defined as the rate at which air is moving in a particular area due to change in temperature.</p>
+        </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<footer>   
+        <div class="footer-content">
+       <img src ="https://img.freepik.com/free-icon/clouded_318-368363.jpg" id ="l3">
+<ul class ="socials">
+    <li> <a href="#"><i class="fa-brands fa-square-facebook"></i></a></li>
+    <li> <a href="#"><i class="fa-brands fa-square-instagram"></i></a></li>
+    <li><a href="#"> <i class="fa-brands fa-square-twitter"></i></a></li>
+    <li><a href="#"> <i class="fa-brands fa-linkedin"></i></a></li>
+</ul>
+</div>
+
+<div class="footer-bottom">
+<p>copyright &copy 2023 Weather Forecast</p>
+</div>
+</footer>
+   
+ <script>
+function valueSender()
+{
+var a=101;
+localStorage.setItem("myValue",a);
+window.location.href="Contact.html";
+}
+function valueSender1(){
+ 
+  var a=101;
+            localStorage.setItem("myValue",a);
+            window.location.href="Register.html";
+         
+ }
+ 
+function valueSender2(){
+ 
+ var a=101;
+           localStorage.setItem("myValue",a);
+           window.location.href="Login.html";
+        
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

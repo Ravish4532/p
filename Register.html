@@ -1,0 +1,182 @@
+<html>
+    <head>
+        <title>Registration Page</title>
+        <script src="https://kit.fontawesome.com/b356ad9dc8.js" crossorigin="anonymous"></script>
+
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+          }
+          body{
+	background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvd6PnDNARQV5VWQyU_2B5D2z5qDo6-z08uQ&usqp=CAU') no-repeat;
+	background-size: cover;
+
+}        .form-box{
+            width: 90%;
+            height: 75vh;
+            max-width: 450px;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background: #fff;
+            padding: 50px 60px 70px;
+            text-align: center;
+        }
+        .form-box h1{
+            font-size: 30px;
+            margin-bottom: 60px;
+            color:#3c00a0;
+            position: relative;
+        }
+        .form-box h1::after{
+            content: '';
+            width: 40vh;
+            height: 4px;
+            border-radius: 3px;
+            background: #3c00a0;
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .input-field{
+            background: #eaeaea;
+            margin: 15px 0;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+        }
+        input{
+            width: 100%;
+            background: transparent;
+            padding: 18px 15px;
+            border: 0;
+            outline: 0;
+        }
+        form p{
+            text-align: left;
+            font-size: 15px;
+        }
+        form p a{
+            text-decoration: none;
+            color:#3c00a0;
+        }
+        .btn-field{
+            width:100%;
+            display: flex;
+            justify-content: center;
+        }
+        .btn-field button{
+            flex-basis: 48%;
+            background: #3c00a0;
+            color:#fff;
+            height: 40px;
+            border-radius: 20px;
+            border:0;
+            outline: 0;
+            cursor: pointer;
+            transition: background 1s;
+        }
+            .btn-field button:hover{
+                cursor: pointer;
+                background-color: #000;
+                transition: 0.5s;
+            }
+       
+            .social-icons{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin: 10px 0;
+                width: 100%;
+                justify-content: space-between;
+                padding-bottom: 15px;
+            }
+        .social-icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.4rem;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                cursor: pointer;
+                margin-bottom: 25px;
+            }
+            .facebook{
+                background-color: #385998;
+            }
+            .instagram{
+                background: linear-gradient(rgb(243,5,171),rgb(205,95,4),yellow);
+            }
+            .google
+            {
+                background-color: #00ACEE;
+            }
+            
+            .twitter
+            {
+                background-color: #00ACEE;
+            }
+       
+    </style>
+    </head>    
+    <body>
+        <div class="container">
+       <div class="form-box">
+        <h1>REGISTRATION PAGE</h1>
+        <form>
+            <div class="input-group">
+                
+                <div class="input-field">
+                    <input type="text" placeholder="Firstname">
+                </div>
+                
+                <div class="input-field">
+                    <input type="email" placeholder="Lastname">
+                </div>
+                <div class="input-field">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <input type="password" placeholder="Password">
+                </div>
+                <p>Lost password? <a href="#">Click Here</a></p>
+            </div><br>
+
+       <div class="btn-field">
+        <button type="button" onclick="valueSender3()">REGISTER</button></div><br>
+
+       <span class="login-form-copy">Or Register with</span><br>
+       
+       <div class="social-icons">
+        <div class="social-icon instagram"><i class="fa fa-instagram"></i></div>
+        <div class="social-icon facebook"><i class="fa fa-facebook"></i></div>
+        <div class="social-icon google"><i class="fa fa-google"></i></div>
+        <div class="social-icon twitter"><span class="fa fa-twitter"></span></div>
+            
+    </div>
+
+        </form>
+       </div> 
+        </div>
+        <script>
+            function valueSender3(){
+                
+  var a=101;
+            localStorage.setItem("myValue",a);
+            window.location.href="Login.html";
+         
+            }
+        </script>
+</body>
+</html>
